@@ -1,0 +1,76 @@
+.body-content {
+    padding: 25px 80px 25px 80px;
+}
+
+.Mycard {
+  border-radius: 10px;
+  background-color: #fff;
+  margin: 30px;
+  padding: 30px;
+  transition: transform 0.2s;
+}
+
+.Mycard:hover {
+    transform: scale(1.05);
+  }
+
+.grid-card {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Inicialmente, una columna en dispositivos pequeños */
+
+    /* Agregar Media Queries para dispositivos más grandes */
+    @media (min-width: 576px) {
+        grid-template-columns: repeat(2, 1fr); /* Dos columnas en dispositivos medianos */
+    }
+
+    @media (min-width: 768px) {
+        grid-template-columns: repeat(3, 1fr); /* Tres columnas en dispositivos grandes */
+    }
+
+    @media (min-width: 992px) {
+        grid-template-columns: repeat(4, 1fr); /* Cuatro columnas en dispositivos extra grandes */
+    }}
+
+.shadow {
+    margin-bottom: 50px;
+}
+
+.container {
+    margin-top: 50px;
+}
+
+.jumbotron {
+    background-color: rgba(48, 48, 48, 0.48);
+    padding: 15px;  
+  }
+
+  .jumbotron-sm {
+    height: 70px;
+    width: auto;
+    padding-left: 15px;
+  }
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+  
+  .image {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    position: relative; /* Necesario para superponer elementos */
+    transition: transform 0.2s, opacity 0.2s; /* Transiciones para suavizar el efecto */
+  }
+  
+  .image img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.2s, opacity 0.2s;
+  }
+  
+  .image:hover {
+    transform: scale(1.1); /* Aumenta el tamaño al 110% */
+    opacity: 0.7; /* Reduce la opacidad al 70% */
+  }
+
